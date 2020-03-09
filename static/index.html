@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework6</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
+    <link rel="stylesheet" type="text/css" href="search.css" />
+    <script src="homepage.js"></script>
+    <script src="search.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+</head>
+
+<body onload="
+// loadPage();
+loadSearch()">
+    <div id="sidebar">
+        <button type="button" id="homepage_button" class="button active" onclick="displayNews()">Google News</button>
+        <button type="button" id="search_button" class="button" onclick="displaySearch()">Search</button>
+    </div>
+    <div id="content">
+        <div id="homepage">
+            <div id="headlines">
+                <div id="carousel">
+                    <img id="carousel_image" src="" alt="slideImage" />
+                    <div id="carousel_text">
+                        <h2 id="carousel_title"></h2>
+                        <p id="carousel_description"></p>
+                    </div>
+                </div>
+                <div id="WordCloud"></div>
+            </div>
+            <div id="CNN_Headlines">
+                <h1>CNN</h1>
+                <hr />
+                <div class="cards">
+                    <div class="card"><img class="cardImage" src="" alt="newsImage" /></div>
+                    <div class="card"><img class="cardImage" src="" alt="newsImage" /></div>
+                    <div class="card"><img class="cardImage" src="" alt="newsImage" /></div>
+                    <div class="card"><img class="cardImage" src="" alt="newsImage" /></div>
+                </div>
+            </div>
+            <div id="Fox_Headlines">
+                <h1>Fox News</h1>
+                <hr />
+                <div class="cards">
+                    <div class="card"><img class="cardImage" src="" alt="newsImage" /></div>
+                    <div class="card"><img class="cardImage" src="" alt="newsImage" /></div>
+                    <div class="card"><img class="cardImage" src="" alt="newsImage" /></div>
+                    <div class="card"><img class="cardImage" src="" alt="newsImage" /></div>
+                </div>
+            </div>
+        </div>
+        <div id="search">
+            <form id="search_form" onsubmit="search(this)">
+                <div class="search_form_row">
+                    <label>Keyword <span>*</span></label>
+                    <input type="text" id="search_keyword" class="search_input_text" required
+                        title="Please fill out this field." />
+                    <label>From <span>*</span></label>
+                    <input type="date" id="search_from" class="search_input_date" required />
+                    <label>To <span>*</span></label>
+                    <input type="date" id="search_to" class="search_input_date" required />
+                </div>
+                <div class="search_form_row">
+                    <label>Category</label>
+                    <select id="search_category" onchange="getSource(this.value)">
+                        <option selected>all</option>
+                        <option value="business">Business</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="general">General</option>
+                        <option value="health">Health</option>
+                        <option value="science">Science</option>
+                        <option value="sports">Sports</option>
+                        <option value="technology">Techonology</option>
+                    </select>
+                    <label>Source</label>
+                    <select id="search_source">
+                        <option selected>all</option>
+                    </select>
+                </div>
+                <div class="search_form_row">
+                    <input type="submit" value="Search" class="button" />
+                    <input type="reset" class="button" onclick="hideResult();"/>
+                </div>
+            </form>
+            <div id="search_result">
+                <div id="noResults" style="display: none;">No results</div>
+                <div class="cards">
+                    <div class="card" onclick="clickCard(this, 'block');">
+                        <div class="cardImage">
+                            <img src="https://cdn.cnn.com/cnnnext/dam/assets/200306230756-01-kirkland-washington-coronavirus-0305-super-tease.jpg"
+                                alt="newsImage" />
+                        </div>
+                        <div class="cardContent">
+                            <h3>Mary J. Blige channels ultimate boss lady in Power sequel, Power Book II: Ghost</h3>
+                            <p>Author: By Ali Daher For Daily Mail Australia</p>
+                            <p>Source: Daliymail.co.uk</p>
+                            <p>Date: 02/10/2020</p>
+                            <p>One of the Most anticipated crime dramas is slated to make its debut on the small screen later this year.</p>
+                            <a href="#">See Orginal Post</a>
+                        </div>
+                        <div class="cardClose" onclick="clickCard(this.parentElement, 'none');">×</div>
+                    </div>
+                </div>
+                <button type="button" class="button" id="show_button" style="display: none;" onclick="showButton()">Show More</button>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+
+</body>
+
+</html>

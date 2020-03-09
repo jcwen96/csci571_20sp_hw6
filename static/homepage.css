@@ -1,0 +1,65 @@
+#headlines {
+    width: 875px;
+    height: 300px;
+    margin: 0px 0px 20px 25px;
+}
+
+#headlines #carousel {
+    width: 500px;
+    height: inherit;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+#carousel #carousel_image {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+#carousel #carousel_text {
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    width: inherit;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#headlines #WordCloud {
+    width: 350px;
+    height: inherit;
+    float: right;
+    background-color: #f3f3f3;
+}
+
+#homepage .card {
+    width: 215px;
+    margin: 0px 5px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+}
+
+#homepage .cardImage {
+    width: 212px;
+    height: 150px;
+    border-radius: 0.3em;
+}
+
+#homepage h1 {
+    margin: 30px auto 5px;
+}
+
+#homepage hr {
+    margin: 10px 0px;
+    border-style: dotted none solid;
+    border-color: black grey grey;
+}
+
+#homepage h2 {
+    margin: 5px auto;
+}
+
+#homepage h3 {
+    margin: 15px auto;
+}

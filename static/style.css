@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 1100px;
+    margin: 25px auto;
+    font-family:"Times New Roman", Times, serif;
+}
+
+.button {
+    border: none;
+    text-align: center;
+    color: black;
+    background-color: #f0f0f0;
+    transition-duration: 0.4s;
+}
+.button:hover {
+    background: #5ea157;
+}
+
+#sidebar {
+    width: 180px;
+    border: 1px solid #b8b6b6;
+    border-radius: 0.3em;
+    overflow: hidden;
+    float: left;
+    position: fixed;
+}
+#sidebar .button {
+    width: inherit;
+    height: 50px;
+    font: normal 1.3em "Times New Roman", Times, serif;
+    line-height: 50px;
+}
+#sidebar .active {
+    background-color: #4b4b4b;
+    color: white;
+}
+#sidebar .active:hover {
+    background-color: #5ea157;
+}
+
+#content {
+    float: right;
+    width: 900px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+}
+.cards .card {
+    background-color: #f0f0f0;
+    border: 1px solid #b8b6b6;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+.card .cardImage, .card .cardImage img {
+    object-fit: cover;
+}

@@ -1,0 +1,103 @@
+#search {
+    display: none;
+    float: right;
+    width: 800px;
+}
+#search_form {
+    height: 175px;
+    padding: 30px 0px 20px;
+    background-color: #f3f3f3;
+    border-radius: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#search_form .search_form_row {
+    line-height: 40px;
+}
+.search_form_row label, .search_input_text, .search_input_date {
+    margin: auto 10px;
+}
+.search_form_row .search_input_text {
+    width: 140px;
+    height: 30px;
+}
+.search_form_row .search_input_date {
+    width: 170px;
+    height: 30px;
+}
+.search_form_row span {
+    color: red;
+}
+#search select {
+    text-align: center;
+    width: 125px;
+    height: 20px
+}
+#search .button {
+    width: 70px;
+    height: 30px;
+    margin: auto 10px;
+    font-size: 0.8em;
+    line-height: 30px;
+}
+#search .button:hover {
+    background: #44af4e;
+}
+
+#search #search_result {
+    margin: 30px 40px;
+}
+#search .cards {
+    flex-direction: column;
+    justify-content: space-between;
+}
+#search .cards .card {
+    min-height: 120px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition-duration: 0.05s;
+    display: none;
+}
+#search .cards .card:hover {
+    box-shadow: 0px 10px 20px gray;
+}
+#search .card .cardImage {
+    width: 74px;
+    margin: 10px;
+}
+#search .card img {
+    width: 74px;
+    height: 74px;
+}
+#search .cardContent {
+    width: 580px;
+    text-align: left;
+}
+#search h3, #search p, #search a {
+    width: 550px;
+    margin: 5px 15px;
+    text-align: left;
+}
+#search span.strong {
+    font-weight: bold;
+}
+#search .cardContent p, #search .cardContent a {
+    display: none;
+}
+#search .cardContent :nth-child(5) {
+    display: block;
+}
+#search .cardClose {
+    font-size: 2em;
+    color: #442478;
+    position: relative;
+    top: -5px;
+    display: none;
+}
+#search .cardClose:hover {
+    color: red;
+}
+#search_result .button {
+    width: 120px;
+}
