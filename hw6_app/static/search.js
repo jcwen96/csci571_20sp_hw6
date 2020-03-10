@@ -48,7 +48,7 @@ function getSource(category) {
             }
             for (var i = 0; i < myJSON.length; i++) {
                 option = document.createElement("option");
-                option.innerHTML = myJSON[i];
+                option.innerText = myJSON[i];
                 select.appendChild(option);
             }
         })
@@ -112,7 +112,7 @@ function displayResult(articles) {
         card.appendChild(div_content);
         // title
         var title = document.createElement("h3");
-        title.innerHTML = articles[i].title;
+        title.innerText = articles[i].title;
         div_content.appendChild(title);
         // author
         var author = document.createElement("p");
@@ -132,17 +132,17 @@ function displayResult(articles) {
         description.setAttribute("style", "display: block");
         div_content.appendChild(description);
         // get the oneline version of description.
-        var description_truncate = description.innerHTML.slice(0,70);
+        var description_truncate = description.innerText.slice(0,70);
         var index = description_truncate.length;
         for (; index > 0; index--) {
             if (description_truncate.charAt(index) == " ") break;
         }
         description_truncate = description_truncate.slice(0, index);
         var oneline = document.createElement("p");
-        oneline.innerHTML = description_truncate;
+        oneline.innerText = description_truncate;
         var linage = Math.round(description.clientHeight / 18);
         if (linage > 1) {
-            oneline.innerHTML += "...";
+            oneline.innerText += "...";
             description.setAttribute("style", "display: none");
             oneline.setAttribute("style", "display: block; white-space: nowrap");
         }
@@ -151,11 +151,11 @@ function displayResult(articles) {
         var link = document.createElement("a");
         link.setAttribute("href", articles[i].url);
         link.setAttribute("target", "_blank");
-        link.innerHTML = "See Orginal Post";
+        link.innerText = "See Orginal Post";
         div_content.appendChild(link);
         // <div class="cardClose"></div>
         var div_close = document.createElement("div");
-        div_close.innerHTML = "×";
+        div_close.innerText = "×";
         div_close.setAttribute("class", "cardClose");
         div_close.setAttribute("onclick", "clickCard(this.parentElement, 'none');")
         card.appendChild(div_close);
@@ -197,16 +197,16 @@ function clickCard(card, display) {
 }
 
 function showButton() {
-    var text = document.getElementById("show_button").innerHTML;
+    var text = document.getElementById("show_button").innerText;
     var cards = document.querySelector("#search_result .cards");
     cards.setAttribute("style", "display: flex");
     if (text == "Show More") {
-        document.getElementById("show_button").innerHTML = "Show Less";
+        document.getElementById("show_button").innerText = "Show Less";
         for (var i = 5; i < cards.childElementCount; i++) {
             cards.children[i].setAttribute("style", "display: flex");
         }
     } else {
-        document.getElementById("show_button").innerHTML = "Show More";
+        document.getElementById("show_button").innerText = "Show More";
         for (var i = 5; i < cards.childElementCount; i++) {
             cards.children[i].setAttribute("style", "display: none");
         }
