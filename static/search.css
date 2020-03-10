@@ -85,10 +85,9 @@
 #search .cardContent p, #search .cardContent a {
     display: none;
 }
-#search .cardContent :nth-child(5) {
-    display: block;
-}
+
 #search .cardClose {
+    height: 18px;
     font-size: 2em;
     color: #442478;
     position: relative;
@@ -97,6 +96,7 @@
 }
 #search .cardClose:hover {
     color: red;
+    cursor: pointer;
 }
 #search_result .button {
     width: 120px;

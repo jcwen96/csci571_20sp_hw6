@@ -13,9 +13,7 @@
     <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
 </head>
 
-<body onload="
-// loadPage();
-loadSearch()">
+<body onload="loadPage(); loadSearch();">
     <div id="sidebar">
         <button type="button" id="homepage_button" class="button active" onclick="displayNews()">Google News</button>
         <button type="button" id="search_button" class="button" onclick="displaySearch()">Search</button>
@@ -83,7 +81,7 @@ loadSearch()">
                 </div>
                 <div class="search_form_row">
                     <input type="submit" value="Search" class="button" />
-                    <input type="reset" class="button" onclick="hideResult();"/>
+                    <input type="reset" value="Clear" class="button" onclick="hideResult();"/>
                 </div>
             </form>
             <div id="search_result">
