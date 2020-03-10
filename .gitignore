@@ -4,6 +4,9 @@
 # Apple Mac OS Desktop Services Store
 .DS_Store
 
+# Azure setting directory
+.azure
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
