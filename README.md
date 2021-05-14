@@ -1,3 +1,3 @@
-# csci571-hw6
+# USC | CSCI 571 Web Technologies | 2020 Spring | HW6
 
-# 0309 finish
+[Website Link](https://csci571-20sp-hw6-jcwen.azurewebsites.net/)
